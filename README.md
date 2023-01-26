@@ -14,12 +14,21 @@ this add-on adds five menus to vertex group context menu/special menu
     looks at all the VGs finds the one that have no verts added and weighetd to them, then removes them  
 **5. Sort VG**  
     ascending sorts the VGs  
-  
-  
-  
-  
-  
-  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
 **shameless plug:**  
 for donations:  
 ETH: 0x7FB2a5408C3AEc292dA0824043A21dA8282E524C  
