@@ -1,7 +1,7 @@
 bl_info = {
     'name': "3DMigoto_GIMI_Tools",
     "author": "HazrateGolabi",
-    'version': (0, 6, 9),
+    'version': (0, 7, 0),
     'blender': (3, 4, 0),
     "location": "Properties Editor > Mesh data > Vertex Groups > Specials menu",
     'category': "Mesh",
@@ -217,41 +217,6 @@ class VGROUP_SN_remove(bpy.types.Operator):
         return {'FINISHED'}
 
 
-class VGROUP_SN_sort(bpy.types.Operator):
-    bl_description = "Sort VGs"
-    bl_idname = 'mesh.sort_vg'
-    bl_label = "Sort VGs"
-    bl_options = {'UNDO'}
-
-    @classmethod
-    def description(cls, context, properties):
-        return cls.bl_rna.description
-
-    @classmethod
-    def poll(cls, context):
-        return True
-
-    def __init__(self):
-        self.selected = list()
-
-    def invoke(self, context, event):
-        if event.alt:
-            self.selected = [*{context.object, *context.selected_objects}]
-        return self.execute(context)
-
-    def execute(self, context):
-        if not self.selected:
-            self.selected = [context.object]
-        for ob in self.selected:
-            if not getattr(ob, 'type', None) == 'MESH':
-                continue
-            
-            #myyy
-            bpy.ops.object.vertex_group_sort()            
-
-        return {'FINISHED'}
-
-
 
 def draw_menu(self, context):
     layout = self.layout
@@ -259,20 +224,17 @@ def draw_menu(self, context):
     layout.operator('mesh.merge_shared_name_vgs_one', icon='BRUSH_INFLATE')
     layout.operator('mesh.fill_vg', icon='BRUSH_FILL')
     layout.operator('mesh.remove_vg', icon='GPBRUSH_ERASE_STROKE')
-    layout.operator('mesh.sort_vg', icon='SORT_ASC')
 
 def register():
     bpy.utils.register_class(VGROUP_SN_merge)
     bpy.utils.register_class(VGROUP_SN_merge_ONE)
     bpy.utils.register_class(VGROUP_SN_fill)
     bpy.utils.register_class(VGROUP_SN_remove)
-    bpy.utils.register_class(VGROUP_SN_sort)
     bpy.types.MESH_MT_vertex_group_context_menu.append(draw_menu)
 
 
 def unregister():
     bpy.types.MESH_MT_vertex_group_context_menu.remove(draw_menu)
-    bpy.utils.unregister_class(VGROUP_SN_sort)
     bpy.utils.unregister_class(VGROUP_SN_remove)
     bpy.utils.unregister_class(VGROUP_SN_fill)
     bpy.utils.unregister_class(VGROUP_SN_merge_ONE)
