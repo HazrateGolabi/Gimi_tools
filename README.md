@@ -29,6 +29,4 @@ this add-on adds five menus to vertex group context menu/special menu
 &nbsp;  
 &nbsp;  
 &nbsp;  
-**shameless plug:**  
-for donations:  
-ETH: 0x7FB2a5408C3AEc292dA0824043A21dA8282E524C  
+
