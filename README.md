@@ -7,7 +7,7 @@ this add-on adds five menus to vertex group context menu/special menu
 **1. Merge shared name VGs**  
     looks at the active selected VG (y) then merges all y.xxx VGs to y; then it sorts the VGs  
 **2. Merge shared name VGs with the active VG**  
-    searches ALL VGs (y) and merges all y.xxx VGs to y; then it sorts the VGs
+    searches ALL VGs (y) and merges all y.xxx VGs to y; then it sorts the VGs  
 **3. Fill VGs**  
     finds the lowest numbered existing VG and the highest one, then fills all the space between them so no number would be missing between the lowest and highest; then it sorts the VGs  
 **4. Remove unused VGs**  
