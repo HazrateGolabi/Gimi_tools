@@ -1,7 +1,7 @@
 bl_info = {
     'name': "3DMigoto_GIMI_Tools",
     "author": "HazrateGolabi",
-    'version': (0, 7, 0),
+    'version': (0, 7, 1),
     'blender': (3, 4, 0),
     "location": "Properties Editor > Mesh data > Vertex Groups > Specials menu",
     'category': "Mesh",
@@ -212,7 +212,7 @@ class VGROUP_SN_remove(bpy.types.Operator):
                 if vg.index not in used_groups:
                     ob.vertex_groups.remove(vg)
             
-        bpy.ops.object.vertex_group_sort()
+        #bpy.ops.object.vertex_group_sort()
 
         return {'FINISHED'}
 
