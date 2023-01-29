@@ -11,9 +11,7 @@ this add-on adds five menus to vertex group context menu/special menu
 **3. Fill VGs**  
     finds the lowest numbered existing VG and the highest one, then fills all the space between them so no number would be missing between the lowest and highest; then it sorts the VGs  
 **4. Remove unused VGs**  
-    looks at all the VGs finds the one that have no verts added and weighetd to them, then removes them  
-**5. Sort VGs**  
-    ascending sorts the VGs  
+    looks at all the VGs finds the one that have no verts added and weighetd to them, then removes them   
 &nbsp;  
 &nbsp;  
 &nbsp;  
